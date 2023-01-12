@@ -38,14 +38,14 @@ const Login = () => {
           <TouchableOpacity style={tw`rounded h-11 justify-center items-center bg-facebook-color mt-4`}
             onPress={() => navigation.navigate('Menu')}>
             <View style={tw`flex-row justify-between items-center`}>
-              <Image style={tw`rounded h-5 w-5 right-17`} source={require('D:/Projetos/bico/src/images/facebook.png')} />
+              <Image style={tw`rounded h-5 w-5 right-17`} source={require('D:/Projetos/app-bico/src/images/facebook.png')} />
               <Text style={tw`text-white`}>Entrar com o Facebook</Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity style={tw`border border-slate-300 rounded h-11 justify-center items-center bg-white mt-4`}
             onPress={() => navigation.navigate('Menu')}>
             <View style={tw`flex-row justify-between items-center `}>
-              <Image style={tw`rounded h-5 w-5 right-17`} source={require('D:/Projetos/bico/src/images/gmail.png')} />
+              <Image style={tw`rounded h-5 w-5 right-17`} source={require('D:/Projetos/app-bico/src/images/gmail.png')} />
               <Text style={tw`pr-7`}>Entrar com Google</Text>
             </View>
           </TouchableOpacity>
