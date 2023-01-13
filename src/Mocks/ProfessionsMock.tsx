@@ -37,49 +37,49 @@ export const ProfessionsMock = [
     },
     {
         id: 10,
-        nome: 'Garota de programa',
+        nome: 'Marceneiro',
     },
     {
         id: 10,
-        nome: 'Garota de programa',
+        nome: 'Marceneiro',
     },
     {
         id: 10,
-        nome: 'Garota de programa',
+        nome: 'Marceneiro',
     },
     {
         id: 10,
-        nome: 'Garota de programa',
+        nome: 'Marceneiro',
     },
     {
         id: 10,
-        nome: 'Garota de programa',
+        nome: 'Marceneiro',
     },
     {
         id: 10,
-        nome: 'Garota de programa',
+        nome: 'Marceneiro',
     },
     {
         id: 10,
-        nome: 'Garota de programa',
+        nome: 'Marceneiro',
     },
     {
         id: 10,
-        nome: 'Garota de programa',
+        nome: 'Marceneiro',
     },
     {
         id: 10,
-        nome: 'Garota de programa',
+        nome: 'Marceneiro',
     },
     {
         id: 10,
-        nome: 'Garota de programa',
+        nome: 'Marceneiro',
     },
     {
         id: 10,
-        nome: 'Garota de programa',
+        nome: 'Marceneiro',
     },
-    
+
 
     
 ]
