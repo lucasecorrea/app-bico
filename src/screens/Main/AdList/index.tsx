@@ -23,6 +23,7 @@ const  AddList = () => {
                 <Text style={tw`text-white`}>Voltar</Text>
               </TouchableOpacity>
               <Text style={tw`text-white text-sm pl-5`}>Pesquisa</Text>
+              <TouchableOpacity onPress={() => navigation.navigate('CadastroAnuncio')}><Text>Anunciar</Text></TouchableOpacity>
             </View>
               <View style={tw`flex-1 px-5 justify-center bg-white mt-20`}>            
                   {AddListMock.map((item, idx) => (
