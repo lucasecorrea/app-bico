@@ -5,7 +5,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Login from './src/screens/Login';
 import Cadastro from './src/screens/Cadastro';
 import AddList from './src/screens/Main/AdList';
-import CadastroAnuncio from './src/screens/Usuario';
+import CadastroAnuncio from './src/screens/Usuario/CadAnuncio';
 
 const Stack = createStackNavigator();
 

@@ -1,12 +1,12 @@
 import {useNavigation} from '@react-navigation/native';
 import React, {Fragment, useEffect, useState} from 'react';
 import {Text, TextInput, TouchableOpacity, View} from 'react-native';
-import tw from '../../../service/tw';
+import tw from '../../../../service/tw';
 import {Image} from 'react-native';
 import {SafeAreaView, useSafeAreaInsets} from 'react-native-safe-area-context';
-import {ProfessionsMock} from '../../Mocks/ProfessionsMock';
+import {ProfessionsMock} from '../../../Mocks/ProfessionsMock';
 import {ScrollView} from 'react-native-gesture-handler';
-import Menu from '../../components/Menu';
+import Menu from '../../../components/Menu';
 import type {CadAnuncio} from '../../../../src/Models/CadAnuncio';
 
 const CadastroAnuncio = () => {
@@ -46,7 +46,7 @@ const CadastroAnuncio = () => {
 
 			<View style={tw`flex-1 bg-gray-50 pb-40`}>
 				<View style={tw`mt-10 justify-center items-center`}>
-					<Text style={tw`text-slate-600 font-normal text-xl`}> Que tipo de serviço </Text>
+					<Text style={tw`text-slate-600 font-normal text-xl font-ubuntu`}> Que tipo de serviço </Text>
 					<Text style={tw`text-slate-600 font-normal text-xl`}> deseja anunciar? </Text>
 				</View>
 				<View style={tw`py-2 mt-5 items-center justify-center`}>
