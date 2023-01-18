@@ -1,30 +1,30 @@
 import {useNavigation} from '@react-navigation/native';
 import React, {Fragment, useEffect, useState} from 'react';
-import {Text, TextInput, TouchableOpacity, View} from 'react-native';
-import tw from '../../../service/tw';
+import {Text, TouchableOpacity, View} from 'react-native';
+import tw from '../../../../service/tw';
 import {Image} from 'react-native';
 import {SafeAreaView, useSafeAreaInsets} from 'react-native-safe-area-context';
-import {ProfessionsMock} from '../../Mocks/ProfessionsMock';
-import {ScrollView} from 'react-native-gesture-handler';
-import Menu from '../../components/Menu';
+import {ProfessionsMock} from '../../../Mocks/ProfessionsMock';
+import Menu from '../../../components/Menu';
 import type {CadAnuncio} from '../../../../src/Models/CadAnuncio';
+import TypeAhead from '../../../components/TypeAhead';
 
 const CadastroAnuncio = () => {
 	const navigation = useNavigation();
 	const insets = useSafeAreaInsets();
-	const [search, setSearch] = useState<string>('');
 	const [list, setList] = useState<CadAnuncio[]>([]);
+	const [value, setValue] = useState<string>('');
 
 	useEffect(() => {
-		if (search) {
+		if (value) {
 			const searchItems = ProfessionsMock.filter(item => (
-				item.nome.toLowerCase().includes(search.toLowerCase())
+				item.nome.toLowerCase().includes(value.toLowerCase())
 			));
 			setList(searchItems);
 		} else {
 			setList(ProfessionsMock);
 		}
-	}, [search]);
+	}, [value]);
 
 	return (
 		<Fragment>
@@ -44,35 +44,25 @@ const CadastroAnuncio = () => {
 				</View>
 			</View>
 
-			<View style={tw`flex-1 bg-gray-50 pb-40`}>
+			<View style={tw`flex-1 bg-slate-100 pb-40`}>
 				<View style={tw`mt-10 justify-center items-center`}>
-					<Text style={tw`text-slate-600 font-normal text-xl`}> Que tipo de serviço </Text>
-					<Text style={tw`text-slate-600 font-normal text-xl`}> deseja anunciar? </Text>
+					<Text style={tw`text-slate-600 font-normal text-xl`}>Que tipo de serviço</Text>
+					<Text style={tw`text-slate-600 font-normal text-xl`}>deseja anunciar?</Text>
 				</View>
-				<View style={tw`py-2 mt-5 items-center justify-center`}>
-					<TextInput style={tw`h-16 px-25 border-solid border-[0.50] border-slate-400 rounded-md`} placeholder='Escolha seu serviço' value={search} onChangeText={setSearch}></TextInput>
-				</View>
-				<View style={tw`py-10 justify-between`}>
-					<ScrollView>
-						{list.length === 0 ? (
-							<View style={tw`flex-1 justify-center items-center pt-[20%]`}>
-								<Text style={tw`text-base text-slate-600`}>Nenhum resultado encontrado</Text>
-							</View>
-						) : (
-							<>
-								{list.map(item => (
-									<TouchableOpacity style={tw`border-solid border-[0.50] border-slate-400 mt-2 mx-10 rounded`}>
-										<View style={tw`bg-gray-50 py-5 pr-10 items-center`} key={item.id}>
-											<Text style={tw`text-slate-600 pl-10 font-semibold text-xl`}>{item.nome}</Text>
-										</View>
-									</TouchableOpacity>
-								))}
-							</>
-						)}
-					</ScrollView>
+				<View style={tw`justify-between`}>
+					<TypeAhead
+						tw={tw}
+						placeholder='Pesquisar'
+						content={list}
+						inputStyle={tw`h-16`}
+						style={tw`ml-[7%] w-86%`}
+						listStyle={tw`m-3 text-base text-slate-600`}
+						setValue={setValue}
+						value={value}
+					/>
 				</View>
 			</View>
-			<Menu tw={tw}></Menu>
+			<Menu tw={tw} />
 		</Fragment>
 	);
 };

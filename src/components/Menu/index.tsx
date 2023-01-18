@@ -11,7 +11,7 @@ const Menu = ({tw}: Props) => {
 	const navigation = useNavigation();
 	return (
 		<View style={tw`bg-white h-[8%]`}>
-			<View style={tw`flex-1 px-5 justify-center`}>
+			<View style={tw`flex-1 px-5 justify-center shadow-md shadow-opacity-50`}>
 				<View style={tw`flex-row items-center h-10`}>
 					<TouchableOpacity style={tw`flex-1 rounded-lg h-11 justify-center items-center`}
 						onPress={() => {
