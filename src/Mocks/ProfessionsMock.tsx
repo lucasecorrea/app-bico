@@ -59,25 +59,4 @@ export const ProfessionsMock = [
 		id: 15,
 		nome: 'Marceneiro',
 	},
-	{
-		id: 16,
-		nome: 'Marceneiro',
-	},
-	{
-		id: 17,
-		nome: 'Marceneiro',
-	},
-	{
-		id: 18,
-		nome: 'Marceneiro',
-	},
-	{
-		id: 19,
-		nome: 'Marceneiro',
-	},
-	{
-		id: 20,
-		nome: 'Marceneiro',
-	},
-
 ];
