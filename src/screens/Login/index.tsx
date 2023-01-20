@@ -39,7 +39,7 @@ const Login = () => {
 						navigation.navigate('Menu');
 					}}>
 					<View style={tw`flex-row justify-between items-center`}>
-						<Image style={tw`rounded h-5 w-5 right-17`} source={require('D:/Projetos/app-bico/src/images/facebook.png')} />
+						<Image style={tw`rounded h-5 w-5 right-17`} source={require('../../images/facebook.png')} />
 						<Text style={tw`text-white`}>Entrar com o Facebook</Text>
 					</View>
 				</TouchableOpacity>
@@ -48,7 +48,7 @@ const Login = () => {
 						navigation.navigate('Menu');
 					}}>
 					<View style={tw`flex-row justify-between items-center `}>
-						<Image style={tw`rounded h-5 w-5 right-17`} source={require('D:/Projetos/app-bico/src/images/gmail.png')} />
+						<Image style={tw`rounded h-5 w-5 right-17`} source={require('../../images/gmail.png')} />
 						<Text style={tw`pr-7`}>Entrar com Google</Text>
 					</View>
 				</TouchableOpacity>
