@@ -51,8 +51,8 @@ const AddList = () => {
 										<Text style={tw`text-sm pt-2`}>{item.descricao}</Text>
 										<Text style={tw`text-lg pt-2`}>R$ {item.preco}</Text>
 										<View style={tw`flex-row justify-between pt-2`}>
-											<Text><Image style={tw`h-3 w-3 mb-5`} source={require('D:/Projetos/app-bico/src/images/pin.png')}/> {item.cidade} - {item.Estado}</Text>
-											<Text><Image style={tw`h-3 w-3`} source={require('D:/Projetos/app-bico/src/images/profile.png')}/> {item.nome}</Text>
+											<Text><Image style={tw`h-3 w-3 mb-5`} source={require('../../../images/pin.png')}/> {item.cidade} - {item.Estado}</Text>
+											<Text><Image style={tw`h-3 w-3`} source={require('../../../images/profile.png')}/> {item.nome}</Text>
 										</View>
 									</View>
 								</View>
