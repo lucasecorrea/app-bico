@@ -15,23 +15,20 @@ const Cadastro = () => {
 	const customerLabelHelper = (
 		<Text style={tw`text-primary font-semibold pl-1`}>Fale com a gente</Text>
 	);
-	const bicoLabelCustomer = (
-		<Text style={tw`text-primary font-semibold text-2xl`}>Bico ;)</Text>
-	);
 
 	return (
-		<>
+		<Fragment>
 			<View style={tw`ios:h-${Math.floor(insets.top / 4)}`}>
 				<SafeAreaView style={tw`flex-0 bg-primary`} />
 			</View>
 			<View style={tw`flex-1 px-10 justify-center bg-white`}>
-				<Text style={tw`text-2xl`}>Crie sua conta na {bicoLabelCustomer}</Text>
-				<TouchableOpacity style={tw`rounded h-11 justify-center items-center bg-facebook-color mt-15`}
+				<Text style={tw`text-2xl`}>Crie sua conta na Bico! ;)</Text>
+				<TouchableOpacity style={tw`rounded h-11 justify-center items-center bg-facebook-color mt-4`}
 					onPress={() => {
 						navigation.navigate('Menu');
 					}}>
 					<View style={tw`flex-row justify-between items-center`}>
-						<Image style={tw`rounded h-5 w-5 right-14`} source={require('D:/Projetos/app-bico/src/images/facebook.png')} />
+						<Image style={tw`rounded h-5 w-5 right-14`} source = {require('../../images/facebook.png')} />
 						<Text style={tw`text-white`}>Continuar com o Facebook</Text>
 					</View>
 				</TouchableOpacity>
@@ -40,16 +37,16 @@ const Cadastro = () => {
 						navigation.navigate('Menu');
 					}}>
 					<View style={tw`flex-row justify-between items-center `}>
-						<Image style={tw`rounded h-5 w-5 right-14`} source={require('D:/Projetos/app-bico/src/images/gmail.png')} />
+						<Image style={tw`rounded h-5 w-5 right-14`} source = {require('../../images/gmail.png')} />
 						<Text style={tw`pr-7`}>Continuar com Google</Text>
 					</View>
 				</TouchableOpacity>
-				<View style={tw`mt-5 flex-row justify-center items-center my-`}>
+				<View style={tw`mt-5 flex-row justify-center items-center`}>
 					<HR style={tw`w-45 h-[0.2] mt-1`} tw={tw} />
 					<Text style={tw`mx-1 text-slate-600`}>ou</Text>
 					<HR style={tw`w-45 h-[0.2] mt-1`} tw={tw} />
 				</View>
-				<View style={tw`py-4`}>
+				<View style={tw`py-7`}>
 					<Text>E-mail</Text>
 					<TextInput style={tw`border-[0.50] border-solid rounded-md h-11 border-slate-400 pl-2 mt-2 mb-2`} />
 					<Text>Senha</Text>
@@ -75,7 +72,7 @@ const Cadastro = () => {
 					<TouchableOpacity>{customerLabelHelper}</TouchableOpacity>
 				</View>
 			</View>
-		</>
+		</Fragment>
 	);
 };
 
