@@ -1,11 +1,10 @@
 import {useNavigation} from '@react-navigation/native';
 import React, {Fragment, useEffect, useState} from 'react';
-import {Text, TextInput, TouchableOpacity, View} from 'react-native';
+import {Text, TouchableOpacity, View} from 'react-native';
 import tw from '../../../../service/tw';
 import {Image} from 'react-native';
 import {SafeAreaView, useSafeAreaInsets} from 'react-native-safe-area-context';
 import {ProfessionsMock} from '../../../Mocks/ProfessionsMock';
-import {ScrollView} from 'react-native-gesture-handler';
 import Menu from '../../../components/Menu';
 import type {CadAnuncio} from '../../../../src/Models/CadAnuncio';
 import TypeAhead from '../../../components/TypeAhead';
