@@ -46,17 +46,17 @@ const CadastroAnuncio = () => {
 
 			<View style={tw`flex-1 bg-slate-100 pb-40`}>
 				<View style={tw`mt-10 justify-center items-center`}>
-					<Text style={tw`text-slate-600 font-normal text-xl`}>Que tipo de serviço</Text>
-					<Text style={tw`text-slate-600 font-normal text-xl`}>deseja anunciar?</Text>
+					<Text style={tw`text-slate-600 font-normal text-xl font-ubuntu`}>Que tipo de serviço</Text>
+					<Text style={tw`text-slate-600 font-normal text-xl font-ubuntu`}>deseja anunciar?</Text>
 				</View>
 				<View style={tw`justify-between`}>
 					<TypeAhead
 						tw={tw}
 						placeholder='Pesquisar'
 						content={list}
-						inputStyle={tw`h-16`}
 						style={tw`ml-[7%] w-86%`}
-						listStyle={tw`m-3 text-base text-slate-600`}
+						inputStyle={tw`h-16 font-ubuntu`}
+						listStyle={tw`m-3 text-base text-slate-600 font-ubuntu`}
 						setValue={setValue}
 						value={value}
 					/>
